@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self' https://api.emailjs.com; font-src https://fonts.gstatic.com;"
+    />
+
+    <!-- 
+       - meta tags 
+    -->
+    <title>DevFolio - a Web Developer Portfolio</title>
+    <meta name="title" content="DevFolio - a Web Developer Portfolio" />
+    <meta
+      name="description"
+      content="This is a personal portfolio made by Ferry"
+    />
+    <!-- 
+       - favicon 
+    -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <!-- EmailJS SDK (Make sure it's loaded before using) -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <!-- 
+       - google font link 
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
+       - material icon link 
+    -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- 
+       - custom css link
+    -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- 
+       - TOP BAR
+   -->
+    <header class="topbar">
+      <a href="#" class="logo">
+        <img
+          src="./assets/images/Logo_dark.png"
+          alt="DevFolio"
+          width="145"
+          height="32"
+          class="dark"
+        />
+        <img
+          src="./assets/images/Logo_light.png"
+          alt="DevFolio"
+          width="145"
+          height="32"
+          class="light"
+        />
+      </a>
+      <button class="icon-btn theme-btn" data-theme-btn>
+        <span class="material-symbols-outlined dark" aria-hidden="true">
+          dark_mode
+        </span>
+        <span class="material-symbols-outlined light" aria-hidden="true">
+          light_mode
+        </span>
+
+        <div class="state-layer"></div>
+      </button>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+          - HERO
+        -->
+        <section class="section hero">
+          <div class="container">
+            <figure
+              class="hero-banner img-holder"
+              style="--width: 240; --height: 240"
+            >
+              <img
+                src="./assets/images/profile.jpeg"
+                width="240"
+                height="240"
+                alt="Feriel Barira"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="hero-content">
+              <span class="label-large section-subtitle">Web Developer</span>
+              <h1 class="display-small">Feriel Barira</h1>
+              <p class="body-large section-text">
+                Hey, I'm Feriel.Let's build something awesome together!
+              </p>
+              <div class="btn-wrapper">
+                <a href="mailto:bariraferyel@gmail.com" class="chip">
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    mail
+                  </span>
+                  <span class="label-large">bariraferyel@gmail.com</span>
+                  <div class="state-layer"></div>
+                </a>
+
+                <a href="tel:+21629184548" class="chip">
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    call
+                  </span>
+                  <span class="label-large">+21629184548</span>
+                  <div class="state-layer"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+          - MAIN CONTENT
+        -->
+        <div class="article">
+          <div class="about-card">
+            <h2 class="card-title title-medium">About</h2>
+
+            <p class="body-medium card-text">
+              Passionate developer creating beautiful, functional websites that
+              deliver great user experiences.
+            </p>
+
+            <ul class="about-list">
+              <li class="list-item">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  location_on
+                </span>
+                <span class="label-medium">Monastir, Tunisia</span>
+              </li>
+              <li class="list-item">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  work
+                </span>
+                <span class="label-medium">Full Stack Developer</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- 
+          - PRIMARY TABS
+           -->
+            <div class="primary-tabs">
+              <button class="tab-btn active" data-tab-btn="projet">
+                <span class="tab-text title-small">Projects</span>
+                <div class="state-layer"></div>
+              </button>
+
+              <button class="tab-btn" data-tab-btn="resume">
+                <span class="tab-text title-small">Resume</span>
+                <div class="state-layer"></div>
+              </button>
+
+              <button class="tab-btn" data-tab-btn="contact">
+                <span class="tab-text title-small">Contact</span>
+                <div class="state-layer"></div>
+              </button>
+            </div>
+
+            <!-- 
+          - PROJECT
+           -->
+            <section
+              class="section tab-content active"
+              data-tab-content="project"
+            >
+              <div class="container">
+                <div class="project-list">
+                  <div class="card">
+                    <figure
+                      class="card-banner img-holder"
+                      style="--width: 334; --height: 180"
+                    >
+                      <img
+                        src="./assets/images/project-1.png"
+                        alt="Pixstock - Stock Media App"
+                        width="334"
+                        height="180"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large card-subtitle">Web App</span>
+                      <h3 class="title-large card-title">
+                        Flexi Jobs - Job Search App
+                      </h3>
+                    </div>
+                    <a
+                      href="https://github.com/Feriel-Barira/PFE"
+                      class="state-layer"
+                    ></a>
+                  </div>
+                  <div class="card">
+                    <figure
+                      class="card-banner img-holder"
+                      style="--width: 334; --height: 180"
+                    >
+                      <img
+                        src="./assets/images/project-2.png"
+                        alt="Cook.io - Recipe App"
+                        width="334"
+                        height="180"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large card-subtitle">Web App</span>
+                      <h3 class="title-large card-title">
+                        CloudPeek - Live Weather App
+                      </h3>
+                    </div>
+                    <a
+                      href="https://github.com/Feriel-Barira/Weather-App"
+                      class="state-layer"
+                    ></a>
+                  </div>
+                  <div class="card">
+                    <figure
+                      class="card-banner img-holder"
+                      style="--width: 334; --height: 180"
+                    >
+                      <img
+                        src="./assets/images/project-3.png"
+                        alt="GitFinder - Github User Finder"
+                        width="334"
+                        height="180"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large card-subtitle">Web App</span>
+                      <h3 class="title-large card-title">
+                        T - Social Media App
+                      </h3>
+                    </div>
+                    <a
+                      href="https://github.com/Feriel-Barira/social-media-app"
+                      class="state-layer"
+                    ></a>
+                  </div>
+                  <div class="card">
+                    <figure
+                      class="card-banner img-holder"
+                      style="--width: 334; --height: 180"
+                    >
+                      <img
+                        src="./assets/images/project-4.png"
+                        alt="Weatherio - Live Weather App"
+                        width="334"
+                        height="180"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <div class="card-content">
+                      <span class="label-large card-subtitle">Web App</span>
+                      <h3 class="title-large card-title">
+                        VEXA - Task Management & Team Collaboration Tool
+                      </h3>
+                    </div>
+                    <a
+                      href="https://github.com/Feriel-Barira/Project-managment-tool"
+                      class="state-layer"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 
+          - RESUME
+           -->
+            <section
+              class="section tab-content resume-tab"
+              data-tab-content="resume"
+            >
+              <div class="container">
+                <h2 class="section-title title-small">
+                  Professional Experience
+                </h2>
+                <ul class="list">
+                  <li class="resume-item">
+                    <div class="resume-card">
+                      <p class="body-large">
+                        Full Stack Developer, Prodigy infoTech
+                      </p>
+                      <span class="label-medium card-subtitle">
+                        August 01, 2024 - August 31, 2024</span
+                      >
+                      <span class="body-medium card-text"
+                        >Led the development of a secure authentication app,
+                        employee management system, and local e-commerce
+                        platform. I also worked on a real-time chat app,
+                        enhancing user experience and system efficiency.</span
+                      >
+                    </div>
+                  </li>
+                  <li class="resume-item">
+                    <div class="resume-card">
+                      <p class="body-large">Full Stack Developer, CodeAlpha</p>
+                      <span class="label-medium card-subtitle">
+                        August 01, 2024 - August 30, 2024</span
+                      >
+                      <span class="body-medium card-text"
+                        >Developed a simple online store, a social media
+                        platform, and a project management tool. I worked on
+                        enhancing user interfaces and improving system
+                        functionality.
+                      </span>
+                    </div>
+                  </li>
+                  <li class="resume-item">
+                    <div class="resume-card">
+                      <p class="body-large">Full Stack Developer, Itqan Labs</p>
+                      <span class="label-medium card-subtitle">
+                        February 05, 2024 - Mai 31, 2024</span
+                      >
+                      <span class="body-medium card-text"
+                        >Developed a modern MERN stack website for part-time job
+                        listings, implementing a feature that allows users to
+                        check their application status directly through a
+                        personalized dashboard.</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="section-title title-small">Education</h2>
+                <ul class="list">
+                  <li class="resume-item">
+                    <div class="resume-card">
+                      <p class="body-large">
+                        Bachelor of Computer Science, Faculty of Sciences of
+                        Monastir
+                      </p>
+                      <span class="label-medium card-subtitle"
+                        >2021 - 2024</span
+                      >
+                    </div>
+                  </li>
+                  <li class="resume-item">
+                    <div class="resume-card">
+                      <p class="body-large">
+                        Baccalauréat of Sciences, El Bachir Khraief High School
+                      </p>
+                      <span class="label-medium card-subtitle"
+                        >2020 - 2021</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+
+                <h2 class="section-title title-small">
+                  Skills and Technologies
+                </h2>
+                <ul class="resume-bottom-list">
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/html5.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="HTML5"
+                      class="icon"
+                    />
+                    <span class="label-medium">HTML5</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/css3.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="CSS3"
+                      class="icon"
+                    />
+                    <span class="label-medium">CSS3</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/javascript.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="JavaScript"
+                      class="icon"
+                    />
+                    <span class="label-medium">JavaScript</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/react.js.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="React.js"
+                      class="icon"
+                    />
+                    <span class="label-medium">React.js</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/node.js.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="Node.js"
+                      class="icon"
+                    />
+                    <span class="label-medium">Node.js</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/github.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="GitHub"
+                      class="icon"
+                    />
+                    <span class="label-medium">GitHub</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/mongoDB.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="MongoDB"
+                      class="icon"
+                    />
+                    <span class="label-medium">MongoDB</span>
+                  </li>
+                  <li class="resume-bottom-item">
+                    <img
+                      src="./assets/images/VS_code.svg"
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                      alt="VS Code"
+                      class="icon"
+                    />
+                    <span class="label-medium">VS Code</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- 
+          - CONTACT
+           -->
+            <section
+              class="section tab-content contact-tab"
+              data-tab-content="contact"
+            >
+              <div class="container">
+                <div class="contact-info">
+                  <h4 class="section-title title-small">Contact Info</h4>
+                  <ul class="contact-info-list">
+                    <li class="contact-info-item">
+                      <div class="icon-box">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          mail
+                        </span>
+                      </div>
+                      <div class="info-content">
+                        <p class="label-small info-title">Mail Us</p>
+                        <a
+                          href="mailto:bariraferyel@gmail.com"
+                          class="label-small info-text"
+                          >bariraferyel@gmail.com</a
+                        >
+                      </div>
+                    </li>
+                    <li class="contact-info-item">
+                      <div class="icon-box">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          call
+                        </span>
+                      </div>
+                      <div class="info-content">
+                        <p class="label-small info-title">Contact Us</p>
+                        <a href="tel:+21629184548" class="label-small info-text"
+                          >+21629184548</a
+                        >
+                      </div>
+                    </li>
+                    <li class="contact-info-item">
+                      <div class="icon-box">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          location_on
+                        </span>
+                      </div>
+                      <div class="info-content">
+                        <p class="label-small info-title">Address</p>
+                        <a href="#" class="label-small info-text"
+                          >El Omrane, Monastir</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="contact-form">
+                  <h3 class="title-large">Let’s Work Together.</h3>
+                  <form id="contact-form" method="POST" class="input-wrapper">
+                    <input
+                      type="text"
+                      name="from_name"
+                      placeholder="Name*"
+                      required
+                      class="input-field"
+                    />
+                    <input
+                      type="email"
+                      name="from_email"
+                      placeholder="Email*"
+                      required
+                      class="input-field"
+                    />
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                      class="input-field"
+                    />
+                    <textarea
+                      name="message"
+                      placeholder="Message*"
+                      required
+                      class="textarea"
+                    ></textarea>
+                    <button class="btn" type="submit">
+                      <span class="label-large">Send Message</span>
+                    </button>
+                    <div id="response-message" class="response-message"></div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- 
+       - FOOTER
+      -->
+    <footer class="footer">
+      <div class="container">
+        <p class="body-medium">Copyright 2024. All right reserved by Feriel</p>
+      </div>
+    </footer>
+    <!-- 
+       - custom js link 
+    -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
